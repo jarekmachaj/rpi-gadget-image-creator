@@ -50,6 +50,13 @@ send "sudo apt-get clean\n"
 expect "$ "
 send "sudo su -\n"
 
+expect "$ "
+send "sudo apt-get -y install bridge-tools\n"
+expect "$ "
+send "sudo apt-get clean\n"
+expect "$ "
+send "sudo su -\n"
+
 set file [slurp "etc/dnsmasq.d/usb0"]
 expect "# "
 send "cat <<EOF >> /etc/dnsmasq.d/usb0\n"
